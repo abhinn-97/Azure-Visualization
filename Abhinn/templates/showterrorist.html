@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Index</title>
+    <style type = "text/css">
+      table, td, th {
+border: 1px solid black;
+}
+
+table {
+border-collapse: collapse;
+width: 100%;
+  text-align: center;
+}
+
+th {
+height: 50px;
+}
+  </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Abhinn Trivedi - 1001748565</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('question7') }}">Question 7</a></li>
+        <li><a href="{{ url_for('question8') }}">Question 8</a></li>
+        <li><a href="{{ url_for('question9') }}">Question 9</a></li>
+        <li><a href="{{ url_for('question10') }}">Question 10-1</a></li>
+        <li><a href="{{ url_for('question102') }}">Question 10-2</a></li>
+        <li><a href="{{ url_for('question11') }}">Question 11-1</a></li>
+        <li><a href="{{ url_for('question112') }}">Question 11-2</a></li>
+      </ul>
+    </div>
+  </nav>
+{% block content %}
+<table>
+  <tr>
+    <td>Time Taken</td>
+    <td>{{timetaken}} seconds</td>
+  </tr>
+</table>
+<p>
+<table>
+<tr><th style="text-align: center;">Country Code</th><th style="text-align: center;">Country Name</th>
+    <th style="text-align: center;">Year</th><th style="text-align: center;">Prevelance</th>
+    <th style="text-align: center;">Terrorist Attack</th></tr>
+{% for datas in data %}
+<tr>
+    <td>{{datas[0]}}</td><td>{{datas[1]}}</td><td>{{datas[2]}}</td><td>{{datas[3]}}</td><td>{{datas[4]}}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+</p>
+</p>
+</body>
+</html>

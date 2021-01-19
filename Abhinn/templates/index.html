@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Home Page
+    </title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style type = "text/css">
+  table, td, th {
+border: 1px solid black;
+}
+
+table {
+border-collapse: collapse;
+width: 100%;
+text-align: center;
+}
+
+th {
+height: 50px;
+}
+</style>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{{ url_for('index') }}">Abhinn Trivedi - 1001748565</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('question7') }}">Question 7</a></li>
+        <li><a href="{{ url_for('question8') }}">Question 8</a></li>
+        <li><a href="{{ url_for('question9') }}">Question 9</a></li>
+        <li><a href="{{ url_for('question10') }}">Question 10-1</a></li>
+        <li><a href="{{ url_for('question102') }}">Question 10-2</a></li>
+        <li><a href="{{ url_for('question11') }}">Question 11-1</a></li>
+        <li><a href="{{ url_for('question112') }}">Question 11-2</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Welcome to the home page</h1>
+        </div>
+        <h2>Name: Abhinn Trivedi</h2>
+        <h3>Student ID: 1001748565</h3>
+    </div>
+</body> 
+</html>
