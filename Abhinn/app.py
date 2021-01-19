@@ -8,9 +8,8 @@ import os
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'blah blah blah blah'
-myHostname = "abhiredis.redis.cache.windows.net"
-myPassword = "Iu4V5SF1XD1QnJfizjj9NcJSMhJpf9Y3+lLtVxcTkn0="
+myHostname = "Your Redis Hostname"
+myPassword = "Your Redis Password"
 
 pool = redis.ConnectionPool(host=myHostname, 
                             port=6380,
@@ -21,10 +20,10 @@ pool = redis.ConnectionPool(host=myHostname,
                             
 client = redis.Redis(connection_pool=pool)
 conn = psycopg2.connect(
-                host = "abhipost.postgres.database.azure.com",
-                dbname = "abhiadb",
-                user = "Abhi@abhipost",
-                password = "Azureadb2020",
+                host = "Postgres host name",
+                dbname = "DB name in postgres",
+                user = "Your User Name",
+                password = "Your Password",
                 sslmode = "require"
             )
 cur = conn.cursor()
